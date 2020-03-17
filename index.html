@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Hillel home work</title>
+  <script src="index.js"></script>
+</head>
+<style>
+  .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 gray;
+  }
+
+  .elem {
+    background-color: coral;
+    box-shadow: 0 0 5px 0 gray; 
+  }
+</style>
+
+<body>
+
+  <div class="box" id="box1">
+    <button id="pl1" type="button" class="elem">+</button>
+    <button id="min1" type="button" class="elem">-</button>
+    <br />
+    <div id="calck1">0</div>
+  </div>
+  <div class="box" id="box2">
+    <button id="pl2" type="button" class="elem">+</button>
+    <button id="min2" type="button" class="elem">-</button>
+    <br />
+    <span id="calck2">0</span>
+  </div>
+  <div class="box" id="box3">
+    <button id="pl3" type="button" class="elem">+</button>
+    <button id="min3" type="button" class="elem">-</button>
+    <br />
+    <span id="calck3">0</span>
+  </div>
+  <div class="box" id="box4">
+    <button id="pl4" type="button" class="elem">+</button>
+    <button id="min4" type="button" class="elem">-</button>
+    <br />
+    <span id="calck4">0</span>
+  </div>
+  <div class="box" id="box5">
+    <button id="pl5" type="button" class="elem">+</button>
+    <button id="min5" type="button" class="elem">-</button>
+    <br />
+    <span id='calck5'>0</span>
+  </div>
+
+
+
+
+
+  <script>
+   let counter1 = 0;
+let counter2 = 0;
+let counter3 = 0;
+let counter4 = 0;
+let counter5 = 0;
+const counterStep = 1;
+const btnPl1 = document.getElementById('pl1');
+const btnMin1 = document.getElementById('min1');
+const box1 = document.getElementById('box1');
+const btnPl2 = document.getElementById('pl2');
+const btnMin2 = document.getElementById('min2');
+const box2 = document.getElementById('box2');
+const btnPl3 = document.getElementById('pl3');
+const btnMin3 = document.getElementById('min3');
+const box3 = document.getElementById('box3');
+const btnPl4 = document.getElementById('pl4');
+const btnMin4 = document.getElementById('min4');
+const box4 = document.getElementById('box4');
+const btnPl5 = document.getElementById('pl5');
+const btnMin5 = document.getElementById('min5');
+const box5 = document.getElementById('box5');
+
+btnPl1.addEventListener('click', e => {
+    counter1 += counterStep;
+    e.stopPropagation();
+    document.getElementById('calck1').innerHTML = counter1;
+});
+btnMin1.addEventListener('click', e => {
+    e.stopPropagation();
+    counter1 -= counterStep;
+    document.getElementById('calck1').innerHTML = counter1;
+});
+box1.addEventListener('click', e => {
+    e.stopPropagation();
+    counter1 += counterStep;
+    document.getElementById('calck1').innerHTML = counter1;
+});
+
+btnPl2.addEventListener('click', e => {
+    counter2 += counterStep;
+    e.stopPropagation();
+    document.getElementById('calck2').innerHTML = counter2;
+});
+btnMin2.addEventListener('click', e => {
+    e.stopPropagation();
+    counter2 -= counterStep;
+    document.getElementById('calck2').innerHTML = counter2;
+});
+box2.addEventListener('click', e => {
+    e.stopPropagation();
+    counter2 += counterStep;
+    document.getElementById('calck2').innerHTML = counter2;
+});
+
+btnPl3.addEventListener('click', e => {
+    counter3 += counterStep;
+    e.stopPropagation();
+    document.getElementById('calck3').innerHTML = counter3;
+});
+btnMin3.addEventListener('click', e => {
+    e.stopPropagation();
+    counter3 -= counterStep;
+    document.getElementById('calck3').innerHTML = counter3;
+});
+box3.addEventListener('click', e => {
+    e.stopPropagation();
+    counter3 += counterStep;
+    document.getElementById('calck3').innerHTML = counter3;
+});
+
+btnPl4.addEventListener('click', e => {
+    counter4 += counterStep;
+    e.stopPropagation();
+    document.getElementById('calck4').innerHTML = counter4;
+});
+btnMin4.addEventListener('click', e => {
+    e.stopPropagation();
+    counter4 -= counterStep;
+    document.getElementById('calck4').innerHTML = counter4;
+});
+box4.addEventListener('click', e => {
+    e.stopPropagation();
+    counter4 += counterStep;
+    document.getElementById('calck4').innerHTML = counter4;
+});
+
+btnPl5.addEventListener('click', e => {
+    counter5 += counterStep;
+    e.stopPropagation();
+    document.getElementById('calck5').innerHTML = counter5;
+});
+btnMin5.addEventListener('click', e => {
+    e.stopPropagation();
+    counter5 -= counterStep;
+    document.getElementById('calck5').innerHTML = counter5;
+});
+box5.addEventListener('click', e => {
+    e.stopPropagation();
+    counter5 += counterStep;
+    document.getElementById('calck5').innerHTML = counter5;
+});
+
+    
+
+  </script>
+</body>
+
+</html>
